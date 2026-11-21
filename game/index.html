@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lantern Festival — Spot the Difference</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='13' font-size='13'>🏮</text></svg>">
+<style>
+  html, body { margin: 0; padding: 0; background: #14101f; }
+  body { font-family: Georgia, 'Times New Roman', serif; color: #f5e9c8; }
+  #wrap { width: 1280px; margin: 0 auto; padding: 12px 0 20px; }
+  h1 { font-size: 22px; margin: 0 0 4px; color: #ffd76a; letter-spacing: 1px; }
+  #sub { font-size: 13px; color: #cbb98a; margin: 0 0 10px; }
+  canvas { display: block; background: #1d1830; border: 2px solid #6b4fa1; border-radius: 10px; }
+  #hud { display: flex; gap: 24px; margin-top: 10px; font-size: 14px; color: #e8d9a8; }
+  #hud b { color: #ffd76a; }
+  #keys { font-size: 13px; color: #a99a72; margin-top: 6px; }
+  #keys kbd { background: #2c2350; border: 1px solid #6b4fa1; border-radius: 4px; padding: 1px 6px; color: #ffe9a8; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <h1>Lantern Festival — Spot the Difference</h1>
+  <p id="sub">Two lantern-lit pictures hang side by side. Nine differences hide in the last scene — find them all before the lanterns burn down.</p>
+  <canvas id="game" width="1280" height="800"></canvas>
+  <div id="hud">
+    <span>Level: <b id="hud-level">1 — Lantern Night Market</b></span>
+    <span>Found: <b id="hud-found">0 / 7</b></span>
+    <span>Time: <b id="hud-time">180 s</b></span>
+    <span>Score: <b id="hud-score">0</b></span>
+    <span>Hints: <b id="hud-hints">3</b></span>
+  </div>
+  <p id="keys">Click a difference on either picture &nbsp;·&nbsp; <kbd>H</kbd> hint &nbsp; <kbd>M</kbd> mute &nbsp; <kbd>N</kbd> next level &nbsp; <kbd>R</kbd> restart &nbsp; <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> choose level &nbsp; <kbd>Esc</kbd> menu</p>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
